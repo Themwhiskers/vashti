@@ -12,12 +12,12 @@ export default {
 		},
 		views : {
 			"main-ui": {
-				entrypoint: "src/main-ui/index.ts"
+				entrypoint: "src/bar-ui/index.ts"
 			},
 		},
 		copy: {
-			"dist/index.html": "views/main-ui/index.html",
-    		"dist/assets": "views/main-ui/assets", 
+			"dist/index.html": "views/bar-ui/index.html",
+    		"dist/assets": "views/bar-ui/assets", 
 		},
 		mac: {
 			bundleCEF: false,
