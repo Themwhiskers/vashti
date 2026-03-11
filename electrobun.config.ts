@@ -17,6 +17,7 @@ export default {
 		},
 		copy: {
 			"src/main-ui/index.html": "views/main-ui/index.html",
+			"src/main-ui/style.css": "views/main-ui/styles.css"
 		},
 		mac: {
 			bundleCEF: false,
