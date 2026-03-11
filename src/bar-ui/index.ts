@@ -1,12 +1,10 @@
-import { Electroview } from "electrobun/view";
+import { Electroview, createRPC } from "electrobun/view";
 
-// Instantiate the electrobun browser api
-const electrobun = new Electroview({ rpc: null });
+const electrobun = new Electroview({ rpc: createRPC({}) });
 
 window.loadPage = () => {
   const newUrl = document.querySelector("#urlInput").value;
   const webview = document.querySelector(".webview");
-
   webview.src = newUrl;
 };
 
@@ -19,3 +17,8 @@ window.goForward = () => {
   const webview = document.querySelector(".webview");
   webview.goForward();
 };
+
+// This is what was missing:
+document.querySelector("#myBtn").addEventListener("click", () => {
+  electrobun.rpc.openMyApplet();
+});
