@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Browser</title>
-    <style rel="stylesheet" link="views://main-ui/styles.css"></style>
+    <link rel="stylesheet" href="views://main-ui/styles.css">
 </head>
 <body id="app">
         <h1>My Web Browser</h1>
@@ -13,8 +13,9 @@
         <button onclick="goBack()">Back</button>
         <button onclick="goForward()">Forward</button>
     
-    <electrobun-webview class="webview" width="100%" height="100%" src="https://electrobun.dev">
-        
-    <script src="views://main-ui/index.js"></script>
+        <electrobun-webview class="webview" src="https://electrobun.dev">
+        </electrobun-webview>        
+    
+        <script src="views://main-ui/index.js"></script>
     </body>
 </html>
