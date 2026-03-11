@@ -4,11 +4,12 @@
 	"type": "module",
 	"description": "Electrobun app with vanilla TypeScript and Vite HMR",
 	"scripts": {
-    	"start": "vite build && NODE_ENV=production electrobun dev",
+    	"start": "bun run build:all && NODE_ENV=production electrobun dev",
+		"build:all": "vite build && VITE_VIEW=keybinds-helper VITE_APPLET=true vite build",
     	"dev:hmr": "concurrently \"bun run hmr\" \"NODE_ENV=development electrobun dev\"",
-    	"hmr": "vite --port 5173",
-    	"build:canary": "vite build && electrobun build --env=canary",
-		"refresh": "bun scripts/refresh.ts",
+    	"hmr": "VITE_VIEW=bar-ui vite --port 5173",
+    	"build:canary": "bun run build:all && electrobun build --env=canary",
+		"refresh": "bun scripts/refresh.ts"
 	},
 	"dependencies": {
 		"electrobun": "1.15.1"
