@@ -4,7 +4,7 @@
 	"type": "module",
 	"description": "Electrobun app with vanilla TypeScript and Vite HMR",
 	"scripts": {
-		"start": "vite build && electrobun dev",
+		"start": "vite build && NODE_ENV=production electrobun dev",
 		"dev": "electrobun dev --watch",
 		"dev:hmr": "concurrently \"bun run hmr\" \"bun run start\"",
 		"hmr": "vite --port 5173",

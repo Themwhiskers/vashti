@@ -33,8 +33,4 @@ export default {
 			bundleCEF: false,
 		},
 	},
-	server: {
-		port: 5173,
-		stricPort: true,
-	}
 } satisfies ElectrobunConfig;
