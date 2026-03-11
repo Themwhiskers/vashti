@@ -1,10 +1,14 @@
 import { defineConfig } from "vite";
 
+const view = process.env.VITE_VIEW ?? "bar-ui";
+const isApplet = process.env.VITE_APPLET === "true";
+const root = isApplet ? `src/applets/${view}` : `src/${view}`;
+
 export default defineConfig({
-	root: "src/bar-ui",
+	root,
 	base: "./",
 	build: {
-		outDir: "../../dist",
+		outDir: `../../dist/${view}`,
 		emptyOutDir: true,
 	},
 	server: {
