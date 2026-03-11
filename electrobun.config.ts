@@ -8,7 +8,7 @@ export default {
 	},
 	build: {
 		bun: {
-			entrypoint: "src/main-ui/index.html"
+			entrypoint: "src/bun/index.ts"
 		},
 		views : {
 			"main-ui": {

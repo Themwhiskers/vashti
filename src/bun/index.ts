@@ -1,8 +1,6 @@
-const hey = () => {
-	document.getElementById("app");
+import { BrowserWindow } from "electrobun/bun";
 
-	function render() {
-		app.innerHTML = `<h1>sup</h1>`
-	};
-	render();
-};
+const win = new BrowserWindow({
+  title: "Vashti",
+  url: "views/main-ui/index.html",
+});
