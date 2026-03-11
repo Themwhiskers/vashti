@@ -1,17 +1,21 @@
 import type { ElectrobunConfig } from "electrobun";
 
 export default {
+	root: "src/bar-ui",
+	base: "./",
 	app: {
 		name: "vanilla-vite",
 		identifier: "vanillavite.electrobun.dev",
 		version: "0.0.1",
 	},
 	build: {
+		outDir: "../../dist",
+		emptyOutDir: true,
 		bun: {
 			entrypoint: "src/bun/index.ts"
 		},
 		views : {
-			"main-ui": {
+			"bar-ui": {
 				entrypoint: "src/bar-ui/index.ts"
 			},
 		},
@@ -29,4 +33,8 @@ export default {
 			bundleCEF: false,
 		},
 	},
+	server: {
+		port: 5173,
+		stricPort: true,
+	}
 } satisfies ElectrobunConfig;
